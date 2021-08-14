@@ -1,6 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
-import { emitWarning } from 'process';
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
