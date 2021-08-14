@@ -1,0 +1,10 @@
+FROM node:14
+
+WORKDIR /usr/app
+
+COPY ./package.json ./
+RUN yarn install
+
+COPY ./build ./build
+EXPOSE 3000
+CMD ["yarn", "prod"]
