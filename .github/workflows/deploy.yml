@@ -52,11 +52,4 @@ jobs:
           ./dist.tgz s3://store-1-test/dist.tgz
           
     - name: deploty to ec2
-      run: |
-        aws deploy create-deployment \ 
-        --application-name store-1-test \
-        --file-exists-behavior OVERWRITE \
-        --deployment-config-name CodeDeployDefault.AllAtOnce \
-        --deployment-group-name store-1-test
-        --s3-location bucket=store-1-test,bundleType=tgz,key=dist.tgz
-          
+      run: aws deploy create-deployment --application-name store-1-test --file-exists-behavior OVERWRITE --deployment-config-name CodeDeployDefault.AllAtOnce --deployment-group-name store-1-test --s3-location bucket=store-1-test,bundleType=tgz,key=dist.tgz
