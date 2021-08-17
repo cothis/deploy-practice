@@ -3,7 +3,7 @@ os: linux
 # 폴더경로는 원하는 곳에 하시면 됩니다. 꼭  /usr/share/nginx/html/안에 들어가지 않아도 됩니다.
 files:
   - source: /
-    destination: /home/ubuntu/dist.zip
+    destination: /home/ubuntu/
     overwrite: yes
 permissions:
   - object: /home/ubuntu/dist.zip
