@@ -3,11 +3,10 @@ os: linux
 # 폴더경로는 원하는 곳에 하시면 됩니다. 꼭  /usr/share/nginx/html/안에 들어가지 않아도 됩니다.
 files:
   - source: /
-    destination: /home/ubuntu/
+    destination: /home/ubuntu/deploy
     overwrite: yes
 permissions:
-  - object: /home/ubuntu/
-    patter: '**'
+  - object: /home/ubuntu/deploy
     owner: ubuntu
     group: ubuntu
     mode: 755
