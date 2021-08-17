@@ -35,7 +35,7 @@ jobs:
         working-directory: './server'
 
       - name: compose
-        run: zip -r ./dist.zip ./server ./appspec.yml
+        run: zip -r ./dist.zip ./server ./appspec.yml ./scripts
 
       - name: aws credentail
         uses: aws-actions/configure-aws-credentials@v1
