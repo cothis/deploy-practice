@@ -35,7 +35,7 @@ jobs:
         working-directory: './server'
 
       - name: compose
-        run: tar -cvf ./dist.tgz ./server/build
+        run: tar -cvzf ./dist.zip ./server/build
 
       - name: aws credentail
         uses: aws-actions/configure-aws-credentials@v1
@@ -48,7 +48,7 @@ jobs:
         run: |
           aws s3 cp \
             --region ap-northeast-2 \
-            ./dist.tgz s3://store-1-test/dist.tgz
+            ./dist.zip s3://store-1-test/dist.zip
 
       - name: deploty to ec2
-        run: aws deploy create-deployment --application-name store-1-test --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name store-1-test --s3-location bucket=store-1-test,bundleType=zip,key=dist.tgz
+        run: aws deploy create-deployment --application-name store-1-test --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name store-1-test --s3-location bucket=store-1-test,bundleType=zip,key=dist.zip
