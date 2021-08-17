@@ -3,10 +3,10 @@ os: linux
 # 폴더경로는 원하는 곳에 하시면 됩니다. 꼭  /usr/share/nginx/html/안에 들어가지 않아도 됩니다.
 files:
   - source: /
-    destination: /home/ubuntu/dist.tgz
+    destination: /home/ubuntu/dist.zip
     overwrite: yes
 permissions:
-  - object: /home/ubuntu/dist.tgz
+  - object: /home/ubuntu/dist.zip
     owner: ubuntu
     group: ubuntu
     mode: 755
