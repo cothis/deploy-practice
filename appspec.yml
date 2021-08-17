@@ -6,7 +6,8 @@ files:
     destination: /home/ubuntu/
     overwrite: yes
 permissions:
-  - object: /home/ubuntu/dist.zip
+  - object: /home/ubuntu/
+    patter: '**'
     owner: ubuntu
     group: ubuntu
     mode: 755
